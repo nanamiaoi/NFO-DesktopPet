@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'" />
+  <title>选择角色</title>
+  <link rel="stylesheet" href="picker.css" />
+</head>
+<body>
+  <div class="panel">
+    <header>
+      <h1>选择桌宠角色</h1>
+      <p>可多选</p>
+    </header>
+    <div id="grid" class="grid"></div>
+    <footer>
+      <label class="remember">
+        <input type="checkbox" id="remember" checked />
+        记住选择，下次直接启动
+      </label>
+      <div class="actions">
+        <button type="button" id="btn-quit" class="ghost">取消</button>
+        <button type="button" id="btn-start" class="primary" disabled>开始</button>
+      </div>
+    </footer>
+  </div>
+  <script src="picker.js"></script>
+</body>
+</html>

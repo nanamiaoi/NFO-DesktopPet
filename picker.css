@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Segoe UI", "Microsoft YaHei", sans-serif;
+  background: #1a1d24;
+  color: #e8eaed;
+  overflow: hidden;
+  user-select: none;
+}
+
+.panel {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 18px 20px 16px;
+}
+
+header h1 {
+  font-size: 18px;
+  font-weight: 650;
+  letter-spacing: 0.02em;
+}
+
+header p {
+  margin-top: 4px;
+  font-size: 12px;
+  color: #9aa3b2;
+}
+
+.grid {
+  flex: 1;
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  overflow: auto;
+  padding-right: 4px;
+}
+
+.card {
+  position: relative;
+  border: 2px solid transparent;
+  background: #252a33;
+  border-radius: 12px;
+  padding: 10px 6px 8px;
+  cursor: pointer;
+  text-align: center;
+  transition: border-color 0.15s, background 0.15s, transform 0.12s;
+}
+
+.card:hover {
+  background: #2d3340;
+}
+
+.card.selected {
+  border-color: #6ea8fe;
+  background: #2a3344;
+}
+
+.card.selected::after {
+  content: '✓';
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  font-size: 12px;
+  color: #6ea8fe;
+  font-weight: 700;
+}
+
+.card img {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  display: block;
+  margin: 0 auto 6px;
+}
+
+.card .name {
+  font-size: 12px;
+  color: #c5cbd6;
+}
+
+footer {
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.remember {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: #9aa3b2;
+  cursor: pointer;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+button {
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+button.primary {
+  background: #6ea8fe;
+  color: #102033;
+  font-weight: 650;
+}
+
+button.ghost {
+  background: #303641;
+  color: #d5dae3;
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'" />
+  <title>大小设置</title>
+  <link rel="stylesheet" href="size.css" />
+</head>
+<body>
+  <div class="panel">
+    <h1>显示大小</h1>
+    <div class="row">
+      <input id="slider" type="range" min="100" max="200" step="1" value="100" />
+      <span id="label">100%</span>
+    </div>
+    <div class="actions">
+      <button type="button" id="btn-reset" class="ghost">重置</button>
+      <button type="button" id="btn-close" class="primary">完成</button>
+    </div>
+  </div>
+  <script src="size.js"></script>
+</body>
+</html>
